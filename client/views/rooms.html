@@ -1,0 +1,25 @@
+<div class="panel panel-default" ng-init="getBooks()">
+  <div class="panel-heading">
+    <h3 class="panel-title">All Available Rooms</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+    	<div ng-repeat="room in rooms">
+    		<div class="col-md-6">
+    			<div class="col-md-6">
+                    <h4>Rooom Avaliability&nbsp;&nbsp;</h4><p>{{room.availability}}</p>
+                    <h4>Room Reservation&nbsp;&nbsp;</h4><p>{{room.reservation}}</p>
+                    <h4>Available From&nbsp;&nbsp;</h4><p>{{room.availableFrom}}</p>
+                    <h4>Available Upto&nbsp;&nbsp;</h4><p>{{room.availableUpto}}</p>
+                    <h4>Rate&nbsp;&nbsp;</h4><p>{{room.rate}}<p>
+                  		<a class="btn btn-primary" href="#/bookRoom/{{room._id}}">Book This Room</a>
+                    
+        		</div>
+            <div class="col-md-6">
+    				<img class="thumbnail" src="{{room.image_url}}">
+    			</div>
+    		</div>
+    	</div>
+    </div>
+  </div>
+</div>
