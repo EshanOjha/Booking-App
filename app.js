@@ -44,6 +44,20 @@ app.get('/api/roomtype',function(req,res){
 });
 
 
+app.post('/addRoom',function(req,res){
+    console.log('request comes to servers')
+    var roomData=req.body;
+    roomcalandar.addRoom(roomData,function(err,data){
+       if(err){
+           throw err;
+       } 
+        console.log(data);
+        res.json(data);
+    });
+      
+});
+
+
 app.post('/api/roomtype',function(req,res){
     var roomType=req.body;
     roomtype.addRoomType(roomType,function(err,data){
