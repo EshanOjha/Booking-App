@@ -1,0 +1,57 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add Rooms here</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+      <form ng-submit="addRoom()">
+        <div class="form-group">
+          <label>Room Name</label>
+          <input type="text" class="form-control" ng-model="room.name" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <label>Base_Price</label>
+          <input type="text" class="form-control" ng-model="room.base_price" placeholder="Base_Price">
+        </div>
+        <div class="form-group">
+          <label>Reservation</label>
+          <input type="text" class="form-control" ng-model="room.reservation" placeholder="Base_Price">
+        </div>
+    
+          <div class="form-group">
+          <label>max_occupacy</label>
+          <input type="text" class="form-control" ng-model="room.max_occupancy" placeholder="max_occupacy">
+        </div>
+        <div class="form-group">
+          <label>availability</label>
+          <textarea class="form-control" ng-model="room.availability" placeholder="Availability"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Rate</label>
+          <textarea class="form-control" ng-model="room.rate" placeholder="Rate"></textarea>
+        </div>
+          
+        <div class="form-group">
+          <label>Image URL</label>
+          <input type="text" class="form-control" ng-model="room.image_url" placeholder="Image URL">
+        </div>
+          
+           <div class="input-field">
+                      <label>Availability From</label>
+                        <input id="availability-from" class="form-control" type="date" ng-model="room.availableFrom">
+                
+                    </div>
+                    
+                  <div class="input-field">
+                        <label >Availability Upto</label>
+                    <input id="check-out-date" class="form-control" type="date" ng-model="room.availableUpto">
+                 </div>
+        <br>
+       
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+    </div>
+  </div>
+</div>
