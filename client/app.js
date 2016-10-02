@@ -13,6 +13,10 @@ myApp.config(function($routeProvider){
         controller:'BooksController',
         templateUrl:'views/book_details.html'
     })
+    .when('/addRoom',{
+       controller:'AdminController',
+        templateUrl:'views/add_room.html'
+    })
 	.when('/Finalize/:id',{
 		controller:'MyBookingController',
 		templateUrl: 'views/myBookings.html'
