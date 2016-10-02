@@ -4,31 +4,30 @@ var mongoose = require('mongoose');
 var roomcalandarSchema = mongoose.Schema({
 	name:{
 		type: String,
-        
 	},
-    roomtype:{
-        type:String,
-         required: true
+    max_occupancy:{
+       type:Number,
+    },
+    base_price:{
+       type:Number,
     },
     availability:{
         type:String,
-         required: true
     },
     reservation:{
         type:String,
-         required: true
     },
     rate:{
         type:Number,
-        required:true
     },
     availableFrom:{
         type:Date,
-        required:true
     },
     availableUpto:{
         type:Date,
-        required:true
+    },
+    image_url:{
+        type:String,
     }
     
   
@@ -45,4 +44,9 @@ module.exports.getRoomCalandar = function(callback, limit){
 // Find room by Id
 module.exports.getRoomById = function(id, callback){
 	roomcalandar.findById(id, callback);
+}
+
+// Add room
+module.exports.addRoom = function(roomCalandar,callback){
+	roomcalandar.create(roomCalandar,callback);
 }
